@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Carter — Software Engineer</title>
+  <meta name="description" content="Portfolio of Alex Carter, a software engineer building scalable systems and delightful products." />
+  <meta property="og:title" content="Alex Carter — Software Engineer" />
+  <meta property="og:description" content="Software engineer portfolio showcasing projects, skills, and experience." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="nav" id="navbar">
+    <div class="nav-inner container">
+      <a href="#home" class="logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>AC<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a>
+        <a href="#skills" class="nav-link"><span class="nav-num">02.</span> Skills</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">03.</span> Projects</a>
+        <a href="#experience" class="nav-link"><span class="nav-num">04.</span> Experience</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">05.</span> Contact</a>
+        <a href="resume.pdf" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Résumé</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero container">
+      <p class="hero-greeting mono reveal">Hi, my name is</p>
+      <h1 class="hero-name reveal">Alex Carter.</h1>
+      <h2 class="hero-tagline reveal">I build things for the <span class="accent" id="typed-target">web</span><span class="cursor-blink">|</span></h2>
+      <p class="hero-bio reveal">
+        I'm a software engineer specializing in designing and shipping reliable,
+        high-performance systems — from distributed backends to pixel-perfect
+        frontends. Currently focused on building developer tools that make
+        engineering teams faster.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+
+      <div class="hero-terminal reveal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title mono">alex@portfolio: ~</span>
+        </div>
+        <div class="terminal-body mono">
+          <p><span class="t-prompt">$</span> whoami</p>
+          <p class="t-out">software_engineer — full-stack · distributed systems · devtools</p>
+          <p><span class="t-prompt">$</span> ls ./currently</p>
+          <p class="t-out">building/  learning-rust/  open-source/  coffee.lock</p>
+          <p><span class="t-prompt">$</span> <span class="t-typing">./showcase --projects</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section container">
+      <h2 class="section-title reveal"><span class="section-num mono">01.</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Hello! I'm Alex, a software engineer who enjoys turning complex problems
+            into simple, elegant solutions. My journey started with a "Hello, World!"
+            in a high-school computer lab, and since then I've shipped production
+            software used by millions of people.
+          </p>
+          <p>
+            I've had the privilege of working at a <strong>high-growth startup</strong>,
+            a <strong>large cloud provider</strong>, and on a number of
+            <strong> open-source projects</strong>. My sweet spot is the intersection of
+            backend architecture and developer experience.
+          </p>
+          <p>Here are a few technologies I've been working with recently:</p>
+          <ul class="about-list mono">
+            <li>TypeScript</li>
+            <li>Go</li>
+            <li>React / Next.js</li>
+            <li>PostgreSQL</li>
+            <li>Kubernetes</li>
+            <li>Rust</li>
+          </ul>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-card"><span class="stat-value" data-count="6">0</span><span class="stat-label">Years of Experience</span></div>
+          <div class="stat-card"><span class="stat-value" data-count="40">0</span><span class="stat-label">Projects Shipped</span></div>
+          <div class="stat-card"><span class="stat-value" data-count="1200">0</span><span class="stat-label">GitHub Contributions / yr</span></div>
+          <div class="stat-card"><span class="stat-value" data-count="15">0</span><span class="stat-label">Open-Source PRs Merged</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section container">
+      <h2 class="section-title reveal"><span class="section-num mono">02.</span> Skills &amp; Tools</h2>
+      <div class="skills-grid" id="skills-grid"><!-- populated by js/main.js --></div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section container">
+      <h2 class="section-title reveal"><span class="section-num mono">03.</span> Things I've Built</h2>
+      <div class="featured-projects" id="featured-projects"><!-- populated by js/main.js --></div>
+      <h3 class="subsection-title reveal">Other Noteworthy Projects</h3>
+      <div class="project-grid" id="project-grid"><!-- populated by js/main.js --></div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section container">
+      <h2 class="section-title reveal"><span class="section-num mono">04.</span> Where I've Worked</h2>
+      <div class="timeline" id="timeline"><!-- populated by js/main.js --></div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section container contact">
+      <p class="mono accent reveal">05. What's Next?</p>
+      <h2 class="contact-title reveal">Let's Build Something Together</h2>
+      <p class="contact-text reveal">
+        My inbox is always open — whether you have a role in mind, a project to
+        collaborate on, or just want to talk shop about systems design and
+        good coffee. I'll do my best to get back to you quickly.
+      </p>
+      <a href="mailto:alex.carter@example.com" class="btn btn-primary btn-lg reveal">Say Hello</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="social-row" id="social-row"><!-- populated by js/main.js --></div>
+    <p class="mono footer-note">Designed &amp; built by Alex Carter · <span id="year"></span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
